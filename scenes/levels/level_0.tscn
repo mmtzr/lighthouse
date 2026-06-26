@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://78dar1xwtb1c"]
+
+[ext_resource type="PackedScene" uid="uid://rb4mcki06d2e" path="res://scenes/items/lighthouse_out.tscn" id="1_sxr8l"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sxr8l"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_bw3rj"]
+sky_material = SubResource("ProceduralSkyMaterial_sxr8l")
+
+[sub_resource type="Environment" id="Environment_osc7o"]
+background_mode = 1
+sky = SubResource("Sky_bw3rj")
+tonemap_mode = 2
+
+[node name="Level0" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_osc7o")
+
+[node name="lighthouse_out" parent="." instance=ExtResource("1_sxr8l")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37175727, 3.6738608, 15.061292)
+fov = 102.27504
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0018565655, 8.171835, 2.0144472)
+light_color = Color(0.87, 0.679905, 0.3741, 1)
+light_energy = 7.186
+omni_range = 37.509

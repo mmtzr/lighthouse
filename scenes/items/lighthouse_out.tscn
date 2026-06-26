@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://rb4mcki06d2e"]
+
+[ext_resource type="Texture2D" uid="uid://7x8hhmotk8r3" path="res://assets/Sprites/Lighthouse_out.png" id="1_lcoqe"]
+
+[node name="lighthouse_out" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 1
+shaded = true
+texture = ExtResource("1_lcoqe")
