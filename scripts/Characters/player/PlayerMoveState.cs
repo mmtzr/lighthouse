@@ -3,17 +3,18 @@ using System;
 
 public partial class PlayerMoveState : PlayerState
 {
+    [Export(PropertyHint.Range, "0,10,0.1")] private float speed = 5;
 
     public override void _PhysicsProcess(double delta)
     {
         if (characterNode.direction == Vector2.Zero)
         {
-            characterNode.stateMachineNode.SwitchStates<PlayerIdleState>();
+            characterNode.StateMachineNode.SwitchStates<PlayerIdleState>();
             return;
         }
 
         characterNode.Velocity = new(characterNode.direction.X, 0, characterNode.direction.Y);
-        characterNode.Velocity *=5;
+        characterNode.Velocity *= speed;
 
         characterNode.MoveAndSlide();
         characterNode.Flip();
@@ -22,12 +23,12 @@ public partial class PlayerMoveState : PlayerState
     {
         if (Input.IsActionJustPressed(GameConstants.INPUT_DASH))
         {
-            characterNode.stateMachineNode.SwitchStates<PlayerDashState>();
+            characterNode.StateMachineNode.SwitchStates<PlayerDashState>();
         }
     }
     protected override void EnterState()
     {
-        characterNode.animPlayerNode.Play(GameConstants.ANIM_WALK);
+        characterNode.AnimPlayerNode.Play(GameConstants.ANIM_WALK);
     }
     
 }

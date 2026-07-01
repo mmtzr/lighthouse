@@ -25,9 +25,9 @@ public partial class StateMachine : Node
 
         if (newState == null){return;}
         // disable old state
-        currentState.Notification(5002);
+        currentState.Notification(GameConstants.NOTIFICATION_EXIT_STATE);
         // disable new state
         currentState = newState;
-        currentState.Notification(5001);
+        currentState.Notification(GameConstants.NOTIFICATION_ENTER_STATE);
     }
 }

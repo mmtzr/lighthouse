@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://cjp1eqstjfns3"]
+[gd_scene format=3 uid="uid://cjp1eqstjfns3"]
 
 [ext_resource type="Script" uid="uid://87y6h1hsq7qo" path="res://scripts/Characters/player/Player.cs" id="1_72eiu"]
 [ext_resource type="Texture2D" uid="uid://brcaka7yj6fis" path="res://assets/Sprites/Characters/Player/Idle Blinking/Idle Blinking_000.png" id="1_kghjy"]
@@ -150,36 +150,36 @@ _data = {
 &"Walk": SubResource("Animation_i2bp6")
 }
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("animPlayerNode", "spriteNode", "stateMachineNode")]
+[node name="Player" type="CharacterBody3D" unique_id=1966539794 node_paths=PackedStringArray("AnimPlayerNode", "SpriteNode", "StateMachineNode")]
 script = ExtResource("1_72eiu")
-animPlayerNode = NodePath("AnimationPlayer")
-spriteNode = NodePath("Sprite3D")
-stateMachineNode = NodePath("StateMachine")
+AnimPlayerNode = NodePath("AnimationPlayer")
+SpriteNode = NodePath("Sprite3D")
+StateMachineNode = NodePath("StateMachine")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=813732433]
 texture_filter = 0
 texture = ExtResource("1_kghjy")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_6t088")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=313151136]
+libraries/ = SubResource("AnimationLibrary_6t088")
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("currentState", "states")]
+[node name="StateMachine" type="Node" parent="." unique_id=105712145 node_paths=PackedStringArray("currentState", "states")]
 script = ExtResource("49_ofe5m")
 currentState = NodePath("IdleState")
 states = [NodePath("IdleState"), NodePath("MoveState"), NodePath("DashState")]
 
-[node name="IdleState" type="Node" parent="StateMachine"]
+[node name="IdleState" type="Node" parent="StateMachine" unique_id=364962424]
 script = ExtResource("47_rr0sw")
 
-[node name="MoveState" type="Node" parent="StateMachine"]
+[node name="MoveState" type="Node" parent="StateMachine" unique_id=527992333]
 script = ExtResource("48_kbkvr")
+speed = 6.3
 
-[node name="DashState" type="Node" parent="StateMachine" node_paths=PackedStringArray("dashTimerNode")]
+[node name="DashState" type="Node" parent="StateMachine" unique_id=1343769031 node_paths=PackedStringArray("dashTimerNode")]
 script = ExtResource("55_fvt27")
 dashTimerNode = NodePath("Timer")
+speed = 11.8
 
-[node name="Timer" type="Timer" parent="StateMachine/DashState"]
+[node name="Timer" type="Timer" parent="StateMachine/DashState" unique_id=1192534942]
 wait_time = 0.5
 one_shot = true

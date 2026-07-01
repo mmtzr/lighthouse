@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://4ev1he5vpyr0"]
+[gd_scene format=3 uid="uid://4ev1he5vpyr0"]
 
 [ext_resource type="Texture2D" uid="uid://otpkm5aupn01" path="res://assets/test/running.png" id="1_6kdge"]
+[ext_resource type="PackedScene" uid="uid://cgvgdvonqorxj" path="res://scenes/items/AnimationLibrary_Godot_Standard.glb" id="1_ftv0v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ftv0v"]
 atlas = ExtResource("1_6kdge")
@@ -89,18 +90,22 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cqics")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
 
-[node name="testMC" type="CharacterBody3D"]
+[node name="testMC" type="CharacterBody3D" unique_id=1028632150]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1640601668]
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="AnimationLibrary_Godot_Standard" parent="AnimationPlayer" unique_id=1069355901 instance=ExtResource("1_ftv0v")]
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=739018599]
+visible = false
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=419133681]
+visible = false
 sprite_frames = SubResource("SpriteFrames_yg2tg")
 frame = 4
 frame_progress = 0.0803448
