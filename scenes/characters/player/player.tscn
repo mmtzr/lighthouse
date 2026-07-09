@@ -150,13 +150,18 @@ _data = {
 &"Walk": SubResource("Animation_i2bp6")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_7rqwa"]
+size = Vector3(1, 1.1502686, 0.25097656)
+
 [node name="Player" type="CharacterBody3D" unique_id=1966539794 node_paths=PackedStringArray("AnimPlayerNode", "SpriteNode", "StateMachineNode")]
+collision_mask = 6
 script = ExtResource("1_72eiu")
 AnimPlayerNode = NodePath("AnimationPlayer")
 SpriteNode = NodePath("Sprite3D")
 StateMachineNode = NodePath("StateMachine")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=813732433]
+pixel_size = 0.0025
 texture_filter = 0
 texture = ExtResource("1_kghjy")
 
@@ -183,3 +188,7 @@ speed = 11.8
 [node name="Timer" type="Timer" parent="StateMachine/DashState" unique_id=1192534942]
 wait_time = 0.5
 one_shot = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1926528966]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0001809597, -0.07133031, -0.00054216385)
+shape = SubResource("BoxShape3D_7rqwa")

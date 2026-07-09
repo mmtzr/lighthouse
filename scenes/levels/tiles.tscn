@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dmggo22betpok"]
+
+[ext_resource type="PackedScene" uid="uid://d3cvuxltff73i" path="res://assets/Models/Dungeon/gltf/floor_tile_small.gltf.glb" id="1_2kucu"]
+[ext_resource type="PackedScene" uid="uid://dqfbnchw3ysqq" path="res://assets/Models/Dungeon/gltf/wall.gltf.glb" id="2_og5h2"]
+[ext_resource type="PackedScene" uid="uid://b2iladhrt2yhd" path="res://assets/Models/Dungeon/gltf/stairs_wood.gltf.glb" id="3_07y5d"]
+[ext_resource type="PackedScene" uid="uid://bi7sjbmgvn5vx" path="res://assets/Models/Dungeon/gltf/wall_corner.gltf.glb" id="4_uqwuf"]
+[ext_resource type="PackedScene" uid="uid://chlkkvr0s1nk6" path="res://assets/Models/Dungeon/gltf/wall_Tsplit.gltf.glb" id="5_axkhv"]
+[ext_resource type="PackedScene" uid="uid://d3rcmquohp5c0" path="res://assets/Models/Dungeon/gltf/wall_open_scaffold.gltf.glb" id="6_du35b"]
+[ext_resource type="PackedScene" uid="uid://d0q3scglbj0v2" path="res://assets/Models/Dungeon/gltf/wall_doorway_scaffold.glb" id="7_koc32"]
+
+[node name="Tiles" type="Node3D" unique_id=896771749]
+
+[node name="floor_tile_small_gltf" parent="." unique_id=1339163173 instance=ExtResource("1_2kucu")]
+
+[node name="wall_gltf" parent="." unique_id=1412213913 instance=ExtResource("2_og5h2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.413877, 0, -1.8100202)
+
+[node name="stairs_wood_gltf" parent="." unique_id=1785080150 instance=ExtResource("3_07y5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.56128, 0, 3.399157)
+
+[node name="wall_corner_gltf" parent="." unique_id=242544959 instance=ExtResource("4_uqwuf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.052612305, 0, -4.055452)
+
+[node name="wall_Tsplit_gltf" parent="." unique_id=716296440 instance=ExtResource("5_axkhv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2297025, 4.7683716e-07, -0.016486883)
+
+[node name="wall_open_scaffold_gltf" parent="." unique_id=466562171 instance=ExtResource("6_du35b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6132813, 0, 5.36192)
+
+[node name="wall_doorway_scaffold2" parent="." unique_id=726119972 instance=ExtResource("7_koc32")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.520634, 0, 1.8629918)
