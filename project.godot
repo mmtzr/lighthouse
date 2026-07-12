@@ -53,9 +53,8 @@ Dash={
 
 [layer_names]
 
-3d_physics/layer_1="player"
-3d_physics/layer_2="floor"
-3d_physics/layer_3="walls"
+3d_physics/layer_1="Environment"
+3d_physics/layer_2="Player"
 
 [rendering]
 

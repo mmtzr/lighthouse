@@ -43,7 +43,6 @@ _subresources={
 "nodes": {
 "PATH:wall_corner": {
 "generate/physics": true,
-"physics/layer": 4,
 "physics/mask": 0
 }
 }

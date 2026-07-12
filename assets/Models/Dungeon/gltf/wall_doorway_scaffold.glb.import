@@ -43,9 +43,8 @@ _subresources={
 "nodes": {
 "PATH:wall_doorway_scaffold": {
 "generate/physics": true,
-"physics/layer": 4,
 "physics/mask": 0,
-"physics/shape_type": 1
+"physics/shape_type": 2
 }
 }
 }
