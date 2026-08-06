@@ -1,5 +1,8 @@
 public class GameConstants
 {
+    // levels
+    public const string MAIN_SCENE = "res://scenes/levels/main.tscn";
+    
     // animations
     public const string ANIM_IDLE = "Idle";
     public const string ANIM_WALK = "Walk";

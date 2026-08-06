@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="lighthouse"
-run/main_scene="uid://bp4brnmlxbcte"
+run/main_scene="uid://bybni73qlp8vl"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="uid://cyv835dlcnlt1"
 

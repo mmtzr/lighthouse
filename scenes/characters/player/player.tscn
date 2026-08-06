@@ -154,6 +154,8 @@ _data = {
 
 [node name="Player" type="CharacterBody3D" unique_id=1966539794 node_paths=PackedStringArray("AnimPlayerNode", "SpriteNode", "StateMachineNode")]
 collision_layer = 2
+floor_max_angle = 1.553343
+floor_snap_length = 0.2
 script = ExtResource("1_72eiu")
 AnimPlayerNode = NodePath("AnimationPlayer")
 SpriteNode = NodePath("Sprite3D")
